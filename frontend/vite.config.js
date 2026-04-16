@@ -14,6 +14,9 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    allowedHosts: [
+      'mirofish-fgcpb6gadffgb3cu.canadacentral-01.azurewebsites.net'
+    ],
     proxy: {
       '/api': {
         target: 'http://localhost:5001',
