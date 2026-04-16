@@ -12,8 +12,9 @@ export default defineConfig({
     }
   },
   server: {
+    host: '0.0.0.0', // VITAL: Permite que Docker y Azure se comuniquen
     port: 3000,
-    open: true,
+    // open: true, -> ELIMINADO: Causaba el error fatal en la nube
     allowedHosts: [
       'mirofish-fgcpb6gadffgb3cu.canadacentral-01.azurewebsites.net'
     ],
